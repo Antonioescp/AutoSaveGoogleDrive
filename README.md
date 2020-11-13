@@ -22,8 +22,11 @@ Necesitas crear una aplicacion de google drive, puedes usar este link
 https://developers.google.com/drive/api/v3/quickstart/js?authuser=1
 
 -Bajas un poco y clickeas "Enable the drive API", pones de nombre "Autoguardado", lees los terminos y continuas
+
 -Una vez termine de cargar haces click en "download client configuration" y le cambias el nombre a client.json y lo pones en la carpeta raiz de los scripts
+
 	-Esto le servira al script para conectarse a tu app
+	
 -Ahora ejecutas el script "configurar.rb", te pedira el directorio de respaldo y una llave de autenticacion, copia y pega el codigo proporsionado por google
 -Listo, has configurado tu aplicacion
 -Añadir nombre de zips y directorios a dirs.txt en la raiz
