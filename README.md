@@ -14,17 +14,34 @@ Ademas de necesitar ruby, necesitaras instalar algunas gemas:
 todo esto lo puedes instalar desde la consola usando el comando 
 	"gem i <nombre de gema>"
 
-tambien necesitas crear una aplicacion en google drive
-
-## Uso
-
-Para correr un script de ruby necesitas abrir la consola en el directorio del script y usar el comando
+## Antes de usar
+Para ejecutar un script de ruby necesitas abrir la consola en el directorio del script y usar el comando
 	"ruby <nombre del script>"
+	
+Necesitas crear una aplicacion de google drive, puedes usar este link
+https://developers.google.com/drive/api/v3/quickstart/js?authuser=1
 
-- Abrir la consola en el directorio donde estan los scripts
-- Ejecutar el script configurar.rb
-	- Aqui te pedira poner el directorio donde se guardaran los archivos rar, los archivos comprimidos de cada directorio a respaldar, asegurate de que el directorio exista
-	- Tambien configuraras la informacion del cliente de tu aplicacion de google drive para poder conectarte
-- Se te creará un archivo dirs.txt en la raiz, aqui escribe los directorios que deseas respaldar y el nombre de los archivos zip
-	- Usa un punto para los nombres de los archivos zip
-	- Despues de los nombres puedes poner un directorio por linea
+-Bajas un poco y clickeas "Enable the drive API", pones de nombre "Autoguardado", lees los terminos y continuas
+-Una vez termine de cargar haces click en "download client configuration" y le cambias el nombre a client.json y lo pones en la carpeta raiz de los scripts
+	-Esto le servira al script para conectarse a tu app
+-Ahora ejecutas el script "configurar.rb", te pedira el directorio de respaldo y una llave de autenticacion, copia y pega el codigo proporsionado por google
+-Listo, has configurado tu aplicacion
+-Añadir nombre de zips y directorios a dirs.txt en la raiz
+-Ejecutar el script auto.rb, los directorios dentro de dirs.txt seran compresos y subidos a la nube en una carpeta llamada savedata en orden cronologico
+
+## Directorios
+En el archivo dirs.txt escribes el nombre del archivo zip y despues los directorios que quieres comprimir en ese archivo, ejemplo:
+
+### contenido de dirs
+bu_dir C:/Users/Antonio Escorcia/Documents/savedata_bu
+
+.Dolphin
+C:\Users\Antonio Escorcia\Documents\Dolphin Emulator\GC
+C:\Users\Antonio Escorcia\Documents\Dolphin Emulator\Wii
+
+.Cemu
+D:\CleanInstall\Games\emu\cemu_1.21.2\SaveData, Updates and DLCs\usr\save
+
+.GBA
+D:/CleanInstall/Games/emu/VisualBoyAdvance-1.8.0-beta3/savedata
+### fin de dirs
