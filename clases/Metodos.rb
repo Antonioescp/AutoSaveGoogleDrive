@@ -60,6 +60,40 @@ def guardar_json my_hash, nombre
   file.close
 end
 
+# abre un archivo de texto
+def leer_txt nombre
+  # agrega txt al final
+  nombre += ".txt" unless nombre.include? ".txt"
+  # lo abre
+  file = File.open(nombre)
+  # guarda el contenido
+  content = file.read
+  # cierra el archivo
+  file.close
+  # retorna el contenido
+  return content
+end
+
+# abre un archivo de texto y lo divide segun criterio, retorna un arreglo
+def leer_txt_split nombre, criterio
+  content = leer_txt nombre
+  return content.split(criterio)
+end
+
+# guarda un archivo txt
+def guardar_txt_split nombre, datos
+  # agrega txt al final
+  nombre += ".txt" unless nombre.include? ".txt"
+  # crea o lee el contenido
+  file = File.open(nombre, "a+")
+  # guarda el contenido
+  # escribe cada elemento junto con un salto de linea
+  datos.each do |data|
+    file.write(data+"\n")
+  end
+  file.close
+end
+
 # Crea credenciales para que el usuario pueda usar
 def crear_credenciales
   cliente = { installed: { client_id: nil, 
