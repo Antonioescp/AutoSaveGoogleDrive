@@ -12,11 +12,11 @@ Ademas de necesitar ruby, necesitaras instalar algunas gemas:
 - fileutils
 
 todo esto lo puedes instalar desde la consola usando el comando 
-	"gem i <nombre de gema>"
+	"gem i nombre_de_la_gema"
 
 ## Antes de usar
 Para ejecutar un script de ruby necesitas abrir la consola en el directorio del script y usar el comando
-	"ruby <nombre del script>"
+	"ruby nombre_del_script"
 	
 Necesitas crear una aplicacion de google drive, puedes usar este link
 https://developers.google.com/drive/api/v3/quickstart/js?authuser=1
